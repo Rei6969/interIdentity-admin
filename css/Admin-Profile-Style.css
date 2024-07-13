@@ -1,0 +1,168 @@
+.admin-profile-section {
+  display: none;
+  padding: 20px;
+}
+
+.admin-profile-section .profile-container,
+.edit-profile-container,
+.change-password-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-profile-section .profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.admin-profile-section .profile-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.admin-profile-section #profile-admin-name {
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+.admin-profile-section #admin-role {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.admin-profile-section .profile-header button,
+.edit-header button,
+#save-changes-btn,
+#save-password-btn,
+#cancel-password-btn,
+#edit-profile-btn,
+#back-btn,
+#upload-photo-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.admin-profile-section .profile-info,
+.edit-info {
+  margin-top: 20px;
+  width: 70%;
+}
+
+.admin-profile-section .profile-info .info,
+.edit-info {
+  background-color: var(--color-main-gray-3);
+  padding: 10px 30px;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.admin-profile-section .profile-info .info div {
+  display: flex;
+}
+
+.admin-profile-section .profile-info .info div h3:nth-child(1) {
+  width: 150px;
+}
+
+.admin-profile-section .profile-info .info div h3 {
+  padding: 5px 0;
+  margin: 0;
+}
+
+.admin-profile-section .edit-info label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.admin-profile-section .edit-info input {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.admin-profile-section .hidden {
+  display: none;
+}
+
+.admin-profile-section .edit-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-profile-section .edit-header img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.admin-profile-section #btn-change-password {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.change-password-container h3 {
+  width: 70%;
+  text-align: left;
+}
+
+.change-password-container .password-container {
+  width: 70%;
+  background-color: var(--color-main-gray-3);
+  box-shadow: 3px 3px 3px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.change-password-container .password-container input {
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.change-password-container .password-container label {
+  width: 50%;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.change-password-container .password-container div {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.change-password-container .password-container div button {
+  margin-left: 20px;
+}

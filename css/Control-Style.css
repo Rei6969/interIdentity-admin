@@ -1,0 +1,607 @@
+.control-section {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  box-sizing: border-box;
+}
+
+.control-section .control-nav {
+  background-color: var(--color-main-gray-2);
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.control-section .control-nav hr {
+  width: 100%;
+  /* height: 1px; */
+  color: #fff;
+  margin-top: 268px;
+  background-color: #fff;
+}
+
+.control-section .control-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 15px;
+}
+
+.control-section button {
+  background-color: #000;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: auto;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+/* MANAGE POST CONTAINER===========================================================================================================================  */
+.control-section .manage-post-container {
+  display: block;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.control-section .manage-post-container .h1-text {
+  font-size: 2rem;
+}
+
+.control-section .manage-post-container .manage-post-filter {
+  display: flex;
+  align-items: center;
+}
+
+.control-section .manage-post-container .manage-post-filter h3 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.control-section .manage-post-container .manage-post-filter input,
+.control-section .manage-post-container .manage-post-filter select {
+  font-size: 1.5rem;
+  background-color: var(--color-main-gray-1);
+  border: none;
+  border-radius: 30px;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.control-section .manage-post-container .posts-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.control-section .manage-post-container .posts-container .posts-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--color-main-gray-1);
+  margin: 10px 0;
+}
+
+.control-section .manage-post-container .posts-container .posts-content img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.control-section .manage-post-container .posts-container .posts-content div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.control-section
+  .manage-post-container
+  .posts-container
+  .posts-content
+  div
+  div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.control-section
+  .manage-post-container
+  .posts-container
+  .posts-content
+  div
+  div
+  h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.control-section
+  .manage-post-container
+  .posts-container
+  .posts-content
+  div
+  div
+  p {
+  margin: 0;
+  padding: 0;
+}
+/* POST CARD =========================================================================================================================== */
+.control-section .manage-post-container .post-card {
+  width: 98%;
+  box-sizing: border-box;
+}
+
+.control-section .manage-post-container .post-card .card-top {
+  background-color: var(--color-main-gray-3);
+  padding: 0 20px;
+  border-radius: 30px;
+}
+
+.control-section .manage-post-container .post-card .card-top .post-header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.control-section .manage-post-container .post-card .card-top .post-header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.control-section .manage-post-container .post-card .card-top .post-header h1,
+.control-section .manage-post-container .post-card .card-top .post-header p {
+  margin: 0;
+  padding: 0;
+}
+
+.control-section .manage-post-container .post-card .card-top .post-text {
+  font-size: 1.3rem;
+}
+
+.control-section .manage-post-container .post-card .card-top .post-icons {
+  display: flex;
+  align-items: center;
+}
+
+.control-section .manage-post-container .post-card .card-top .post-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.control-section
+  .manage-post-container
+  .post-card
+  .card-top
+  .post-icons
+  div
+  img {
+  width: 40px;
+  height: 40px;
+}
+
+.control-section .manage-post-container .post-card .card-bottom {
+  background-color: var(--color-main-gray-1);
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.control-section
+  .manage-post-container
+  .post-card
+  .card-bottom
+  .comments-content {
+  display: block;
+}
+
+.control-section
+  .manage-post-container
+  .post-card
+  .card-bottom
+  .comments-content
+  .main-comment {
+  display: flex;
+}
+
+.control-section
+  .manage-post-container
+  .post-card
+  .card-bottom
+  .post-comments-container {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.control-section .manage-post-container .post-card .card-bottom img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.control-section .manage-post-container .post-card .card-bottom p {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.control-section
+  .manage-post-container
+  .post-card
+  .card-bottom
+  .comments-content
+  .reply-content {
+  display: flex;
+  margin-left: 60px;
+}
+
+.control-section .manage-post-container #post-image-container {
+  display: none;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.control-section .manage-post-container #post-image-container img {
+  width: 100%;
+}
+/* POST CARD END =========================================================================================================================== */
+
+/* MANAGE POST CONTAINER END=========================================================================================================================== */
+
+/* PENDING APPROVAL CONTAINER =========================================================================================================================== */
+.control-section .pending-approvals-container {
+  display: block;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.control-section .pending-approvals-container .h1-text {
+  font-size: 2rem;
+}
+
+.control-section .pending-approvals-container .pending-approval-filter {
+  display: flex;
+  align-items: center;
+}
+
+.control-section .pending-approvals-container .pending-approval-filter h3 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.control-section .pending-approvals-container .pending-approval-filter input,
+.control-section .pending-approvals-container .pending-approval-filter select {
+  font-size: 1.5rem;
+  background-color: var(--color-main-gray-1);
+  border: none;
+  border-radius: 30px;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.control-section .pending-approvals-container .post-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top {
+  background-color: var(--color-main-gray-3);
+  padding: 0 20px;
+  border-radius: 30px;
+  margin: 15px 0;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-header
+  img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-header
+  h1,
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-header
+  p {
+  margin: 0;
+  padding: 0;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-text {
+  font-size: 1.3rem;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-icons {
+  display: flex;
+  align-items: center;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-icons
+  div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-top
+  .post-icons
+  div
+  img {
+  width: 40px;
+  height: 40px;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-bottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.control-section
+  .pending-approvals-container
+  .post-container
+  .post-content-bottom
+  button {
+  margin-left: 20px;
+}
+
+.control-section .pending-approvals-container #pending-post-image-container {
+  display: none;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.control-section
+  .pending-approvals-container
+  #pending-post-image-container
+  img {
+  width: 100%;
+}
+/* PENDING APPROVAL CONTAINER END =========================================================================================================================== */
+
+/* ARCHIVE CONTAINER =========================================================================================================================== */
+.control-section .archive-container {
+  display: block;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.control-section .archive-container .h1-text {
+  font-size: 2rem;
+}
+
+.control-section .archive-container .archive-filter {
+  display: flex;
+  align-items: center;
+}
+
+.control-section .archive-container .archive-filter h3 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.control-section .archive-container .archive-filter input,
+.control-section .archive-container .archive-filter select {
+  font-size: 1.5rem;
+  background-color: var(--color-main-gray-1);
+  border: none;
+  border-radius: 30px;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.control-section .archive-container .post-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.control-section .archive-container .post-container .post-content-top {
+  background-color: var(--color-main-gray-3);
+  padding: 0 20px;
+  border-radius: 30px;
+  margin: 15px 0;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-header
+  img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-header
+  h1,
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-header
+  p {
+  margin: 0;
+  padding: 0;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-text {
+  font-size: 1.3rem;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-icons {
+  display: flex;
+  align-items: center;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-icons
+  div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-top
+  .post-icons
+  div
+  img {
+  width: 40px;
+  height: 40px;
+}
+
+.control-section .archive-container .post-container .post-content-bottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.control-section
+  .archive-container
+  .post-container
+  .post-content-bottom
+  button {
+  margin-left: 20px;
+}
+
+.control-section .archive-container #pending-post-image-container {
+  display: none;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.control-section .archive-container #pending-post-image-container img {
+  width: 100%;
+}
+
+.story-content {
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+/* ARCHIVE CONTAINER END =========================================================================================================================== */
+
+.poll-question {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.poll-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.poll-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.poll-option label {
+  flex-grow: 1;
+}
+
+.poll-votes {
+  margin-left: 10px;
+}

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interIdentity</title>
+    <link rel="icon" href="./../media/images/logo2.png" type="image/png" />
+
+    <link rel="stylesheet" href="./../css/Root-Style.css" />
+    <link rel="stylesheet" href="./../css/Dashboard-Style.css" />
+    <link rel="stylesheet" href="./../css/Dashboard-Section-Style.css" />
+    <link rel="stylesheet" href="./../css/Content-Setting-Style.css" />
+    <link rel="stylesheet" href="./../css/Staff-Management-Style.css" />
+    <link rel="stylesheet" href="./../css/Admin-Profile-Style.css" />
+    <link rel="stylesheet" href="./../css/Control-Style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="nav" id="dashboard-aside-container">
+        <div class="admin-header" id="admin-header">
+          <img
+            src="./../media/icons/icons8-person-64.png"
+            alt="img"
+            id="admin-profile"
+          />
+          <h1 id="admin-name">Admin</h1>
+        </div>
+
+        <a class="btn-dashboard" id="btn-dashboard">Dashboard</a>
+        <a class="btn-content" id="btn-content">Content Settings</a>
+        <a class="btn-control" id="btn-control">Control</a>
+        <a class="btn-staff" id="btn-staff">Staff Management</a>
+        <a class="btn-logout" id="btn-logout">Logout</a>
+      </aside>
+
+      <main>
+        <!-- DASHBOARD ============================================================================================================================== -->
+        <section class="dashboard-section" id="dashboard-section">
+          <div class="dashboard-left">
+            <p>OVERVIEW</p>
+            <hr />
+            <a href="#" class="btn-engagements" id="btn-engagements"
+              >Engagements</a
+            >
+            <a href="#" class="btn-users" id="btn-users">Users</a>
+            <a href="#" class="btn-admin-staff" id="btn-admin-staff"
+              >Admin and Staff</a
+            >
+          </div>
+
+          <div class="dashboard-right">
+            <div class="dashboard-landing" id="dashboard-landing">
+              <h1 class="registered-users-count">0</h1>
+              <hr />
+              <p>Registered Users</p>
+              <button class="btn-view-user-engagement">
+                View User Engagement
+              </button>
+            </div>
+
+            <div
+              class="user-engagement-container"
+              id="user-engagement-container"
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <h1 class="h1-text">User Engagements</h1>
+                <button class="btn-back-user-engagement">Back</button>
+              </div>
+
+              <div class="registered-users-container">
+                <div style="display: flex">
+                  <h3>Registered Users:</h3>
+                  <h3 class="registered-users-count users-text">0</h3>
+                </div>
+
+                <button class="btn-manage-users">Manage Users</button>
+              </div>
+
+              <div class="table-container">
+                <table id="age-gender-table">
+                  <thead>
+                    <tr>
+                      <th rowspan="2">AGE</th>
+                      <th colspan="3">GENDER</th>
+                    </tr>
+                    <tr>
+                      <th>MALE</th>
+                      <th>FEMALE</th>
+                      <th>OTHERS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-age-group="12-">
+                      <td>12-</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="13-17">
+                      <td>13-17</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="18-24">
+                      <td>18-24</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="25-34">
+                      <td>25-34</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="35-44">
+                      <td>35-44</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="45-54">
+                      <td>45-54</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="55-64">
+                      <td>55-64</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                    <tr data-age-group="65+">
+                      <td>65+</td>
+                      <td data-gender="male">0</td>
+                      <td data-gender="female">0</td>
+                      <td data-gender="others">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-container">
+                <table class="city-table">
+                  <thead>
+                    <tr>
+                      <th colspan="2">Cities and Provinces</th>
+                    </tr>
+                  </thead>
+                  <tbody class="city-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="manage-users-container" id="manage-users-container">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <h1 class="h1-text">Manage Users</h1>
+                <button class="btn-back-manage-users">Back</button>
+                <button class="btn-back-users-profile" style="display: none">
+                  Back
+                </button>
+              </div>
+
+              <div
+                class="registered-users-container"
+                id="registered-manage-users"
+              >
+                <div style="display: flex">
+                  <h3>Total No. of Registered Users:</h3>
+                  <h3 class="registered-users-count users-text">0</h3>
+                </div>
+              </div>
+
+              <div class="filter-container"></div>
+
+              <div class="users-card-container" id="users-card-container">
+                <!-- <div class="users-card-content">
+                  <div>
+                    <img src="./../media/images/default-profile.png" alt="img" />
+                    <h1>NAME</h1>
+                  </div>
+                  <img
+                    src="./../media/icons/icons8-chevron-right-90.png"
+                    alt="right"
+                  />
+                </div>
+
+                <div class="users-card-content">
+                  <div>
+                    <img src="./../media/images/brook.jpg" alt="img" />
+                    <h1>NAME</h1>
+                  </div>
+                  <img
+                    src="./../media/icons/icons8-chevron-right-90.png"
+                    alt="right"
+                  />
+                </div>
+
+                <div class="users-card-content">
+                  <div>
+                    <img src="./../media/images/brook.jpg" alt="img" />
+                    <h1>NAME</h1>
+                  </div>
+                  <img
+                    src="./../media/icons/icons8-chevron-right-90.png"
+                    alt="right"
+                  />
+                </div> -->
+              </div>
+
+              <!-- USER INFO ============================================================================================================================== -->
+              <div class="user-info-container" id="user-info-container">
+                <div class="user-profile-name">
+                  <img
+                    src="./../media/images/default-profile.png"
+                    alt="img"
+                    class="profile-img"
+                  />
+                  <h1 class="name"></h1>
+                </div>
+
+                <div class="user-info">
+                  <hr />
+                  <div>
+                    <h3>First Name:</h3>
+                    <h3 class="first-name"></h3>
+                  </div>
+
+                  <hr />
+                  <div>
+                    <h3>Last Name:</h3>
+                    <h3 class="last-name"></h3>
+                  </div>
+
+                  <hr />
+                  <div>
+                    <h3>Email:</h3>
+                    <h3 class="email"></h3>
+                  </div>
+
+                  <hr />
+                  <div>
+                    <h3>Contact:</h3>
+                    <h3 class="contact"></h3>
+                  </div>
+
+                  <hr />
+                  <div>
+                    <h3>City or Province:</h3>
+                    <h3 class="province"></h3>
+                  </div>
+
+                  <hr />
+                  <div>
+                    <h3>Age:</h3>
+                    <h3 class="age"></h3>
+                  </div>
+                  <hr />
+                </div>
+
+                <h2>POSTS</h2>
+
+                <div class="posts-count">
+                  <div>
+                    <h1>BLOGS</h1>
+                    <h1 class="blogs-count"></h1>
+                  </div>
+
+                  <div>
+                    <h1>DISCUSSIONS</h1>
+                    <h1 class="discussions-count"></h1>
+                  </div>
+
+                  <div>
+                    <h1>POLLS</h1>
+                    <h1 class="polls-count"></h1>
+                  </div>
+                </div>
+
+                <div class="restrict-container">
+                  <button class="btn-restrict">Restrict</button>
+                </div>
+              </div>
+              <!-- USER INFO END ============================================================================================================================== -->
+            </div>
+          </div>
+        </section>
+        <!-- DASHBOARD END ============================================================================================================================== -->
+
+        <!-- CONTENT SETTINGS ============================================================================================================================== -->
+        <section class="content-section" id="content-section">
+          <div class="content-nav">
+            <a class="btn-home" id="btn-home">Home</a>
+            <a class="btn-videos" id="btn-videos">Videos</a>
+            <a class="btn-news" id="btn-news">News</a>
+            <a class="btn-events" id="btn-events">Events</a>
+            <a class="btn-articles" id="btn-articles">Articles</a>
+            <a class="btn-about-us" id="btn-about-us">About Us</a>
+          </div>
+
+          <!-- <section class="home-section">
+            <div class="banner-container">
+              <h1>BANNER</h1>
+              <img src="" alt="banner" />
+              <button class="btn-change-banner">Change</button>
+            </div>
+          </section> -->
+
+          <!-- VIDEOS ============================================================================================================================== -->
+          <section class="videos-section">
+            <div class="videos-nav">
+              <a href="#" class="2D-animated-videos">2D Animated Videos</a>
+              <a href="#" class="multimedia-resources">Multimedia Resources</a>
+              <a href="#" class="virtual-events">Virtual Events</a>
+            </div>
+
+            <div class="videos-container"></div>
+
+            <div class="add-btn-container">
+              <button id="btn-add-video">Add New Video</button>
+            </div>
+
+            <div class="new-video-container">
+              <div class="new-video-header">
+                <h1>ADD NEW VIDEO</h1>
+                <button class="btn-video-back">Back</button>
+              </div>
+
+              <label for="video-type-select">Type</label>
+              <select id="video-type-select">
+                <option value="2D-animated-videos">2D Animated Videos</option>
+                <option value="multimedia-resources">
+                  Multimedia Resources
+                </option>
+                <option value="virtual-events">Virtual Events</option>
+              </select>
+
+              <label for="video-link">Embedded Link:</label>
+              <input
+                type="url"
+                id="video-link"
+                name="video-link"
+                placeholder="https://www.youtube.com/embed/tgbNymZ7vqY"
+                pattern="https://www\.youtube\.com/embed/.*"
+                title="Please enter a valid YouTube embed URL in the format https://www.youtube.com/embed/VIDEO_ID"
+                required
+              />
+
+              <label for="video-title">Video Title:</label>
+              <input type="text" id="video-title" placeholder="Insert Title" />
+
+              <label for="video-description">Video Description:</label>
+              <textarea
+                id="video-description"
+                placeholder="Describe what's in your video"
+                maxlength="330"
+              ></textarea>
+
+              <div class="add-btn-container">
+                <button id="btn-add-new-video">ADD</button>
+                <button id="btn-update-video" style="display: none">
+                  UPDATE
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- VIDEOS END ============================================================================================================================== -->
+
+          <!-- NEWS ============================================================================================================================== -->
+          <section class="news-section">
+            <div class="news-container"></div>
+
+            <div class="add-btn-container">
+              <button id="btn-add-news">Add New News</button>
+            </div>
+
+            <div class="new-news-container">
+              <div class="new-news-header">
+                <h1>ADD NEW NEWS</h1>
+                <button class="btn-news-back">Back</button>
+              </div>
+
+              <label for="news-img">News Image</label>
+              <input type="file" id="news-img" accept="image/*" maxlength="1" />
+
+              <label for="news-title">News Title:</label>
+              <input type="text" id="news-title" placeholder="Insert Title" />
+
+              <label for="news-inp-content">News Content:</label>
+              <textarea
+                id="news-inp-content"
+                placeholder="Describe what's in your news"
+              ></textarea>
+
+              <div class="add-btn-container">
+                <button id="btn-add-new-news">ADD</button>
+                <button id="btn-update-news" style="display: none">
+                  UPDATE
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- NEWS END ============================================================================================================================== -->
+
+          <!-- EVENTS ============================================================================================================================== -->
+          <section class="events-section">
+            <div class="events-container"></div>
+
+            <div class="add-btn-container">
+              <button id="btn-add-events">Add New Event</button>
+            </div>
+
+            <div class="new-events-container">
+              <div class="new-events-header">
+                <h1>ADD NEW EVENT</h1>
+                <button class="btn-events-back">Back</button>
+              </div>
+
+              <label for="events-img">Event Image</label>
+              <input
+                type="file"
+                id="events-img"
+                accept="image/*"
+                maxlength="1"
+              />
+
+              <label for="events-title">Event Title:</label>
+              <input type="text" id="events-title" placeholder="Insert Title" />
+
+              <label for="events-inp-content">Event Content:</label>
+              <textarea
+                id="events-inp-content"
+                placeholder="Describe what's in your events"
+              ></textarea>
+
+              <div class="add-btn-container">
+                <button id="btn-add-new-events">ADD</button>
+                <button id="btn-update-events" style="display: none">
+                  UPDATE
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- EVENTS END ============================================================================================================================== -->
+
+          <!-- ARTICLES ============================================================================================================================== -->
+          <section class="articles-section">
+            <div class="articles-container"></div>
+
+            <div class="add-btn-container">
+              <button id="btn-add-articles">Add New Article</button>
+            </div>
+
+            <div class="new-articles-container">
+              <div class="new-articles-header">
+                <h1>ADD NEW ARTICLE</h1>
+                <button class="btn-articles-back">Back</button>
+              </div>
+
+              <label for="articles-img">Article Image</label>
+              <input
+                type="file"
+                id="articles-img"
+                accept="image/*"
+                maxlength="1"
+              />
+
+              <label for="articles-title">Article Title:</label>
+              <input
+                type="text"
+                id="articles-title"
+                placeholder="Insert Title"
+              />
+
+              <label for="articles-inp-content">Article Content:</label>
+              <textarea
+                id="articles-inp-content"
+                placeholder="Describe what's in your articles"
+              ></textarea>
+
+              <div class="add-btn-container">
+                <button id="btn-add-new-articles">ADD</button>
+                <button id="btn-update-articles" style="display: none">
+                  UPDATE
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- ARTICLES END ============================================================================================================================== -->
+        </section>
+        <!-- CONTENT SETTINGS END ============================================================================================================================== -->
+
+        <!-- STAFF MANAGEMENT ============================================================================================================================== -->
+        <section class="staff-management-section" id="staff-management-section">
+          <h1 class="h1-text1">STAFF MANAGEMENT</h1>
+
+          <div class="staff-table-container">
+            <table class="staff-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Contact</th>
+                  <th>Date Joined</th>
+                  <th>Location</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="staffs-table-body"></tbody>
+            </table>
+          </div>
+          <button class="add-staff-btn">Add Staff Member</button>
+
+          <div class="new-staff-account" id="new-staff-account">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <h1 class="h1-text">CREATE NEW STAFF ACCOUNT</h1>
+              <button class="btn-back-staff-account">Back</button>
+            </div>
+
+            <div class="account-inp-container">
+              <div>
+                <div>
+                  <label for="first-name">First Name: </label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    class="first-name not-name"
+                  />
+                </div>
+                <div>
+                  <label for="last-name">Last Name: </label>
+                  <input
+                    type="text"
+                    id="last-name"
+                    class="last-name not-name"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" class="email" />
+              </div>
+
+              <div>
+                <label for="contact">Contact: </label>
+                <input type="number" id="contact" class="contact" />
+              </div>
+
+              <div>
+                <label for="city-province">City / Province: </label>
+                <input type="text" id="city-province" class="city-province" />
+              </div>
+
+              <div>
+                <label for="birthday">Birthday: </label>
+                <input type="date" id="birthday" class="birthday" />
+              </div>
+
+              <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" class="password" />
+              </div>
+
+              <div>
+                <label for="confirm-password">Confirm Password: </label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="confirm-password"
+                />
+              </div>
+
+              <button class="btn-add-staff-account">Add Account</button>
+            </div>
+          </div>
+        </section>
+        <!-- STAFF MANAGEMENT END ============================================================================================================================== -->
+
+        <!-- ADMIN PROFILE ============================================================================================================================== -->
+        <section class="admin-profile-section" id="admin-profile-section">
+          <div class="profile-container">
+            <div class="profile-header">
+              <div style="display: flex; align-items: center">
+                <img
+                  src="./../media/images/default-profile.png"
+                  alt="Profile Picture"
+                  id="profile-pic"
+                />
+                <div>
+                  <h2 id="profile-admin-name">First Name Last Name</h2>
+                  <p id="admin-role">Role</p>
+                </div>
+              </div>
+              <button id="edit-profile-btn">Edit Profile</button>
+            </div>
+
+            <div class="profile-info">
+              <h3>PERSONAL INFORMATION</h3>
+              <div class="info">
+                <hr />
+                <div>
+                  <h3>First Name:</h3>
+                  <h3 id="info-first-name">Name</h3>
+                </div>
+
+                <hr />
+                <div>
+                  <h3>Last Name:</h3>
+                  <h3 id="info-last-name">Name</h3>
+                </div>
+
+                <hr />
+                <div>
+                  <h3>Role:</h3>
+                  <h3 id="info-role">Role</h3>
+                </div>
+
+                <hr />
+                <div>
+                  <h3>Email:</h3>
+                  <h3 id="info-email">admin@gmail.com</h3>
+                </div>
+
+                <hr />
+                <div>
+                  <h3>Contact:</h3>
+                  <h3 id="info-contact">09XXXXXXXXX</h3>
+                </div>
+
+                <hr />
+                <div>
+                  <h3>City/Province:</h3>
+                  <h3 id="info-address">Location</h3>
+                </div>
+
+                <hr />
+                <div>
+                  <h3>Birthday:</h3>
+                  <h3 id="info-birthday">0000-00-00</h3>
+                </div>
+
+                <hr />
+              </div>
+            </div>
+          </div>
+
+          <div class="edit-profile-container hidden">
+            <div
+              style="display: flex; justify-content: space-between; width: 77%"
+            >
+              <h3>EDIT PERSONAL INFORMATION</h3>
+              <button id="back-btn">Back</button>
+            </div>
+
+            <div class="edit-header">
+              <img
+                src="./../media/images/default-profile.png"
+                alt="Profile Picture"
+                id="edit-profile-pic"
+              />
+              <button id="upload-photo-btn">Upload Photo</button>
+            </div>
+
+            <div class="edit-info">
+              <hr />
+              <label for="edit-first-name">First Name:</label>
+              <input type="text" id="edit-first-name" value="Admin" />
+
+              <hr />
+              <label for="edit-last-name">Last Name:</label>
+              <input type="text" id="edit-last-name" value="Admin" />
+
+              <hr />
+              <label for="edit-role">Role:</label>
+              <input type="text" id="edit-role" value="Administrator" />
+
+              <hr />
+              <label for="edit-email">Email:</label>
+              <input type="email" id="edit-email" value="admin@email.com" />
+
+              <hr />
+              <label for="edit-contact">Contact:</label>
+              <input type="text" id="edit-contact" value="09XXXXXXXXX" />
+
+              <hr />
+              <label for="edit-address">Address:</label>
+              <input type="text" id="edit-address" value="Address" />
+
+              <hr />
+              <label for="edit-birthday">Birthday:</label>
+              <input type="date" id="edit-birthday" value="2001-01-01" />
+              <hr />
+
+              <button id="btn-change-password">Change Password</button>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: flex-end;
+                width: 77%;
+                margin-top: 20px;
+              "
+            >
+              <button id="save-changes-btn">Save Changes</button>
+            </div>
+          </div>
+
+          <div class="change-password-container hidden">
+            <h3>CHANGE PASSWORD</h3>
+
+            <div class="password-container">
+              <label for="old-password">Old Password</label>
+              <input
+                type="password"
+                id="old-password"
+                style="margin-bottom: 40px"
+              />
+
+              <label for="new-password">New Password</label>
+              <input type="password" id="new-password" />
+
+              <label for="admin-confirm-password">Confirm Password</label>
+              <input type="password" id="admin-confirm-password" />
+
+              <div>
+                <button id="save-password-btn">Save</button>
+                <button id="cancel-password-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ADMIN PROFILE END ============================================================================================================================== -->
+
+        <!-- CONTROL ============================================================================================================================== -->
+        <section class="control-section" id="control-section">
+          <aside class="control-nav">
+            <hr />
+            <a href="#" class="btn-manage-post">Manage Post</a>
+            <a href="#" class="btn-pending-approvals">Pending Approvals</a>
+            <a href="#" class="btn-archive">Archive</a>
+          </aside>
+
+          <main class="control-main-container">
+            <div class="manage-post-container">
+              <h1 class="h1-text">POSTS MANAGEMENT</h1>
+
+              <div class="manage-post-filter">
+                <h3>FILTER</h3>
+
+                <select class="manage-post-filter-type">
+                  <option value="posts">Blogs</option>
+                  <option value="stories">Stories</option>
+                  <option value="polls">Polls</option>
+                </select>
+
+                <input
+                  type="text"
+                  class="manage-post-filter-search"
+                  placeholder="Author"
+                />
+              </div>
+
+              <div class="posts-container"></div>
+
+              <div class="post-card" style="display: none">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <h1 style="font-size: 2rem">MANAGE POST</h1>
+                  <button class="btn-post-back">Back</button>
+                </div>
+
+                <div class="card-top">
+                  <div class="post-header">
+                    <img
+                      src="./../media/images/brook.jpg"
+                      alt="img"
+                      class="card-user-profile"
+                    />
+
+                    <div>
+                      <h1 class="card-user-name">Name</h1>
+                      <p class="card-post-date">00-00-0000</p>
+                    </div>
+                  </div>
+
+                  <h1 class="story-title"></h1>
+
+                  <p class="post-text card-post-content story-content"></p>
+
+                  <div id="post-image-container"></div>
+
+                  <div class="poll-card-container"></div>
+
+                  <div class="post-icons">
+                    <div>
+                      <img
+                        src="./../media/icons/icons8-heart-50.png"
+                        alt="heart"
+                      />
+                      <p class="card-heart-count">0</p>
+                    </div>
+                    <div>
+                      <img
+                        src="./../media/icons/icons8-comment-96.png"
+                        alt="comment"
+                      />
+                      <p class="card-comment-count">0</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <h1>COMMENTS</h1>
+
+                  <div class="post-comments-container">
+                    <!-- <div class="comments-content">
+                      <div class="main-comment">
+                        <img src="./../media/images/brook.jpg" alt="img" />
+                        <div>
+                          <h3>Name</h3>
+                          <p class="comment-texts"></p>
+                        </div>
+                      </div>
+
+                      <div class="reply-content">
+                        <img src="./../media/images/brook.jpg" alt="img" />
+                        <div>
+                          <h3>Name</h3>
+                          <p class="comment-texts"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comments-content">
+                      <div class="main-comment">
+                        <img src="./../media/images/brook.jpg" alt="img" />
+                        <div>
+                          <h3>Name</h3>
+                          <p class="comment-texts">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Excepturi, temporibus! Ipsam quae recusandae
+                            accusantium? In numquam voluptatibus repellat. Illo
+                            dicta quidem doloremque doloribus quos alias fuga
+                            reprehenderit et quisquam rem!
+                          </p>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    display: flex;
+                    width: 100%;
+                    justify-content: flex-end;
+                    margin-top: 20px;
+                  "
+                >
+                  <button class="btn-archive-post" id="btn-archive-manage-post">
+                    Archive Post
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pending-approvals-container">
+              <h1 class="h1-text" id="pending-count">PENDING APPROVALS</h1>
+
+              <div class="pending-approval-filter">
+                <h3>FILTER</h3>
+
+                <select class="pending-approval-filter-type">
+                  <option value="posts">Blogs</option>
+                  <option value="stories">Stories</option>
+                  <option value="polls">Polls</option>
+                </select>
+
+                <input
+                  type="text"
+                  class="pending-approval-filter-search"
+                  placeholder="Author"
+                />
+              </div>
+
+              <div class="post-container"></div>
+            </div>
+
+            <div class="archive-container">
+              <h1 class="h1-text">ARCHIVE</h1>
+
+              <div class="archive-filter">
+                <h3>FILTER</h3>
+
+                <select class="archive-filter-type">
+                  <option value="posts">Blogs</option>
+                  <option value="stories">Stories</option>
+                  <option value="polls">Polls</option>
+                </select>
+
+                <input
+                  type="text"
+                  class="archive-filter-search"
+                  placeholder="Author"
+                />
+              </div>
+
+              <div class="post-container"></div>
+            </div>
+          </main>
+        </section>
+        <!-- CONTROL END ============================================================================================================================== -->
+      </main>
+    </div>
+
+    <script
+      src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js"
+      type="module"
+    ></script>
+
+    <script type="module" src="./../js/Dashboard-Script.js" defer></script>
+    <script
+      type="module"
+      src="./../js/Dashboard-Section-Script.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="./../js/Content-Setting-Script.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="./../js/Staff-Management-Script.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="./../js/Control-Manage-Post-Script.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="./../js/Control-Pending-Approval-Script.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="./../js/Control-Archive-Script.js"
+      defer
+    ></script>
+    <script type="module" src="./../js/Admin-Profile-Script.js" defer></script>
+  </body>
+</html>

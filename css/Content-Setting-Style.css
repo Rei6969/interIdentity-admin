@@ -1,0 +1,489 @@
+.content-section {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.content-section .content-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-section .content-nav a {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* .content-section .home-container {
+} */
+
+/* VIDEOS ============================================================================================================================================== */
+.videos-section {
+  display: none;
+  width: 100%;
+}
+
+.videos-section .videos-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.videos-section .videos-nav a {
+  font-size: 1.3rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.videos-container .video-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.videos-container .video-content iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
+
+.videos-container .video-content .video-title-description {
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.videos-container .video-content .video-title-description h1 {
+  font-size: 4rem;
+  color: var(--color-main-purple-1);
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.videos-container .video-content .video-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.videos-section .new-video-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.videos-section .new-video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.videos-section .new-video-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.videos-section .new-video-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.videos-section .new-video-container input,
+.videos-section .new-video-container select {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.videos-section .new-video-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  margin-bottom: 50px;
+}
+
+.videos-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.videos-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* VIDEOS END ============================================================================================================================================== */
+
+/* NEWS ============================================================================================================================================== */
+.news-section {
+  display: none;
+  width: 100%;
+}
+
+.news-container .news-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  place-items: center;
+}
+
+.news-container .news-content img {
+  width: 100%;
+  height: 315px;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-container .news-content .news-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; */
+}
+
+.news-container .news-content .news-title-description h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.news-container .news-content .news-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.news-section .new-news-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.news-section .new-news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.news-section .new-news-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.news-section .new-news-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.news-section .new-news-container input {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.news-section .new-news-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 50px;
+}
+
+.news-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.news-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* NEWS END ============================================================================================================================================== */
+
+/* EVENTS ============================================================================================================================================== */
+.events-section {
+  display: none;
+  width: 100%;
+}
+
+.events-container .events-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  place-items: center;
+}
+
+.events-container .events-content img {
+  width: 100%;
+  height: 315px;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.events-container .events-content .events-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; */
+}
+
+.events-container .events-content .events-title-description h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.events-container .events-content .events-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.events-section .new-events-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.events-section .new-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.events-section .new-events-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.events-section .new-events-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.events-section .new-events-container input {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.events-section .new-events-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 50px;
+}
+
+.events-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.events-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* EVENTS END ============================================================================================================================================== */
+
+/* ARTICLES ============================================================================================================================================== */
+.articles-section {
+  display: none;
+  width: 100%;
+}
+
+.articles-container .articles-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  place-items: center;
+}
+
+.articles-container .articles-content img {
+  width: 100%;
+  height: 315px;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.articles-container .articles-content .articles-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; */
+}
+
+.articles-container .articles-content .articles-title-description h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.articles-container .articles-content .articles-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.articles-section .new-articles-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.articles-section .new-articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.articles-section .new-articles-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.articles-section .new-articles-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.articles-section .new-articles-container input {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.articles-section .new-articles-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 50px;
+}
+
+.articles-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.articles-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* ARTICLES END ============================================================================================================================================== */
