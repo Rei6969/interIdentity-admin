@@ -1,0 +1,969 @@
+.content-section {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.content-section .content-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-section .content-nav a {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* HOME ============================================================================================================================================== */
+.update-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.members-update-container,
+.about-update-container,
+.home-update-container,
+.intersex-variation-update-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  max-height: 95%;
+  overflow: auto;
+  background-color: var(--color-main-gray-3);
+
+  display: none;
+  padding: 20px 30px;
+  z-index: 10;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.intersex-variation-update-container p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.members-update-container .update-input-container,
+.about-update-container .update-input-container,
+.home-update-container .update-input-container,
+.intersex-variation-update-container .intersex-update-input-container {
+  width: 100%;
+}
+
+.members-update-container .update-input-container input,
+.members-update-container .update-input-container textarea,
+.about-update-container .update-input-container input,
+.about-update-container .update-input-container textarea,
+.home-update-container .update-input-container input,
+.home-update-container .update-input-container textarea,
+.intersex-variation-update-container .intersex-update-input-container input,
+.intersex-variation-update-container .intersex-update-input-container textarea {
+  font-size: 1.5rem;
+  padding: 10px;
+  width: 97%;
+  margin: 10px 0;
+  border: 1px solid #000;
+}
+
+.members-update-container .update-input-container textarea,
+.about-update-container .update-input-container textarea,
+.home-update-container .update-input-container textarea,
+.intersex-variation-update-container .intersex-update-input-container textarea {
+  resize: none;
+  height: 200px;
+}
+
+.members-update-container .update-button-container,
+.about-update-container .update-button-container,
+.home-update-container .update-button-container,
+.intersex-variation-update-container .update-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.members-update-container .update-button-container button,
+.about-update-container .update-button-container button,
+.home-update-container .update-button-container button,
+.intersex-variation-update-container .update-button-container button {
+  margin: 10px 0;
+  padding: 5px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.members-update-container .update-button-container button:hover,
+.about-update-container .update-button-container button:hover,
+.home-update-container .update-button-container button:hover,
+.intersex-variation-update-container .update-button-container button:hover {
+  background-color: var(--color-main-gray-2);
+}
+
+.about-update-container h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.members-update-container h1,
+.home-update-container h1,
+.intersex-variation-update-container h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.home-section .main-header-section {
+  position: relative;
+}
+
+.home-section .main-header-section .btn {
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 5px 20vh 5px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-section .main-header-section .prev-btn {
+  bottom: 10px;
+  transform: rotate(180deg);
+}
+
+.home-section .main-header-section .next-btn {
+  bottom: 10px;
+  right: 0;
+}
+
+.home-section .main-header-section .main-header {
+  margin-top: 20px;
+  height: 50vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  white-space: nowrap;
+  scrollbar-width: none;
+  width: 100%;
+  border: 0.5px solid #000;
+}
+
+.home-section .main-header-section .header-img-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.home-section .main-header-section .header-img-container img {
+  width: 100%;
+  height: 50vh;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-section .main-header-section .indicator-container {
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 5px;
+}
+
+.home-section .main-header-section .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.home-section .main-header-section .dot.active {
+  background-color: #fff;
+}
+
+section.intersex-ph-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+section.intersex-ph-container h1 {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 4.5rem;
+}
+
+section.intersex-ph-container h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+section.intersex-ph-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+section.variations-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+section.variations-section p {
+  font-size: 1.5rem;
+}
+
+section.variations-section img {
+  object-fit: contain;
+  object-position: center;
+  width: 50%;
+}
+
+section.variations-section h1 {
+  font-size: 4.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+section.variations-section .intersex-variation-nav {
+  background-color: var(--color-main-gray-3);
+  box-shadow: 3px 3px 3px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 130px;
+  padding: 10px;
+}
+
+section.variations-section .intersex-variation-nav h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+section.education-videos-container {
+  /* display: block; */
+  width: 100%;
+}
+
+section.education-videos-container h1 {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 4.5rem;
+}
+
+section.education-videos-container .videos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+section.education-videos-container .videos-container .video-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section.education-videos-container .videos-container .video-content iframe {
+  width: 100%;
+  height: 240px;
+  border: none;
+}
+
+section.education-videos-container .videos-container .video-content p {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+section.community-banner-container,
+section.news-banner-container,
+section.faq-banner-container {
+  display: block;
+  width: 100%;
+  margin-top: 100px;
+}
+
+section.community-banner-container img,
+section.news-banner-container img,
+section.faq-banner-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+section.community-banner-container p,
+section.news-banner-container p {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+div.home-btn-container button {
+  display: block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+div.home-btn-container button:hover {
+  background-color: var(--color-main-gray-2);
+}
+
+div.home-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.intersex-variation-section {
+  display: none;
+}
+
+section.intersex-variation-section .intersex-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.intersex-variation-section .intersex-section h1 {
+  font-size: 4.5rem;
+  margin-top: auto;
+}
+section.intersex-variation-section .intersex-section p {
+  font-size: 1.5rem;
+}
+
+section.intersex-variation-section .intersex-container img {
+  width: 50%;
+}
+
+section.intersex-variation-section .common-variations-section h1 {
+  font-size: 3.5rem;
+}
+
+section.intersex-variation-section .variations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+section.intersex-variation-section .variations h1 {
+  font-size: 3.5rem;
+  color: var(--color-main-purple-1);
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+
+section.intersex-variation-section .variations p {
+  font-size: 1.5rem;
+  word-break: break-all;
+}
+
+section.intersex-variation-section .variations img {
+  height: auto;
+  width: 45%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* HOME END ============================================================================================================================================== */
+
+/* VIDEOS ============================================================================================================================================== */
+.videos-section {
+  display: none;
+  width: 100%;
+}
+
+.videos-section .videos-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.videos-section .videos-nav a {
+  font-size: 1.3rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.videos-container .video-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.videos-container .video-content iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
+
+.videos-container .video-content .video-title-description {
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.videos-container .video-content .video-title-description h1 {
+  font-size: 2rem;
+  color: var(--color-main-purple-1);
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.videos-container .video-content .video-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.videos-section .new-video-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.videos-section .new-video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.videos-section .new-video-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.videos-section .new-video-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.videos-section .new-video-container input,
+.videos-section .new-video-container select {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.videos-section .new-video-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  margin-bottom: 50px;
+}
+
+.videos-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.videos-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* VIDEOS END ============================================================================================================================================== */
+
+/* NEWS ============================================================================================================================================== */
+.news-section {
+  display: none;
+  width: 100%;
+}
+
+.news-container .news-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  place-items: center;
+}
+
+.news-container .news-content img {
+  width: 100%;
+  height: 315px;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-container .news-content .news-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; */
+}
+
+.news-container .news-content .news-title-description h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.news-container .news-content .news-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.news-section .new-news-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.news-section .new-news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.news-section .new-news-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.news-section .new-news-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.news-section .new-news-container input {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.news-section .new-news-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 50px;
+}
+
+.news-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.news-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* NEWS END ============================================================================================================================================== */
+
+/* EVENTS ============================================================================================================================================== */
+.events-section {
+  display: none;
+  width: 100%;
+}
+
+.events-container .events-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  place-items: center;
+}
+
+.events-container .events-content img {
+  width: 100%;
+  height: 315px;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.events-container .events-content .events-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; */
+}
+
+.events-container .events-content .events-title-description h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.events-container .events-content .events-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.events-section .new-events-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.events-section .new-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.events-section .new-events-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.events-section .new-events-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.events-section .new-events-container input {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.events-section .new-events-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 50px;
+}
+
+.events-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.events-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* EVENTS END ============================================================================================================================================== */
+
+/* ARTICLES ============================================================================================================================================== */
+.articles-section {
+  display: none;
+  width: 100%;
+}
+
+.articles-container .articles-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  place-items: center;
+}
+
+.articles-container .articles-content img {
+  width: 100%;
+  height: 315px;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.articles-container .articles-content .articles-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 315px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; */
+}
+
+.articles-container .articles-content .articles-title-description h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.articles-container .articles-content .articles-title-description p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.articles-section .new-articles-container {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.articles-section .new-articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.articles-section .new-articles-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.articles-section .new-articles-container label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.articles-section .new-articles-container input {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+}
+
+.articles-section .new-articles-container textarea {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 50px;
+}
+
+.articles-section .add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  /* display: grid;
+  place-items: end; */
+  width: 100%;
+}
+
+.articles-section button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* ARTICLES END ============================================================================================================================================== */
+
+/* ABOUT US ============================================================================================================================================== */
+.about-main-container {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.about-main-container .about-header-img {
+  width: 100%;
+}
+
+.about-main-container .intro-container h1 {
+  font-size: 4rem;
+  padding: 0;
+  margin: 20px 0 0 0;
+  color: var(--color-main-purple-1);
+}
+
+.about-main-container .intro-container p {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.about-main-container .mission-container h1,
+.about-main-container .vision-container h1 {
+  font-weight: 100;
+  font-size: 3rem;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.about-main-container .mission-container p,
+.about-main-container .vision-container p {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.about-main-container .board-members-container .text {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.about-main-container .board-members-container .members-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  margin: 30px 10px;
+  box-sizing: border-box;
+}
+
+.about-main-container .board-members-container .members-content img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-main-container .board-members-container .members-content .member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-main-container .board-members-container .members-content h1 {
+  font-size: 3rem;
+  color: var(--color-main-purple-1);
+  padding: 0;
+  margin: 0;
+}
+
+.about-main-container .board-members-container .members-content h3 {
+  font-size: 2rem;
+  color: var(--color-main-purple-1);
+  text-decoration: underline;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.about-main-container .board-members-container .members-content p {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* ABOUT US END ============================================================================================================================================== */
