@@ -1,0 +1,41 @@
+:root {
+  /* --color-main-yellow-1: #ffda00;
+  --color-main-yellow-2: #ffeb9a;
+  --color-main-purple-1: #8c00ff;
+  --color-main-purple-2: #c379ff;
+  --color-main-gray-1: #c4c4c4;
+  --color-main-gray-2: #707070;
+  --color-main-gray-3: #ebebeb;
+  --background-color: #fff;
+  --font-color-white: #fff;
+  --font-color-black: #000;
+  --font-color-purple: #8c00ff; */
+
+  --color-main-yellow-1: #ffeeaa;
+  --color-main-yellow-2: #fff3c4;
+  --color-main-purple-1: #753494;
+  --color-main-purple-2: #977fc6;
+  --color-main-purple-3: #e7ddff;
+  --color-main-black: #363839;
+  --color-main-white: #fcfcfc;
+  --color-main-gray-1: #c4c4c4;
+  --color-main-gray-2: #707070;
+  --color-main-gray-3: #ebebeb;
+  --background-color: #fff;
+  --font-color-white: #fff;
+  --font-color-black: #000;
+  --font-color-purple: #753494;
+
+  --font-style-title: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body,
+html {
+  background-color: var(--background-color);
+  box-sizing: border-box;
+}
+
+* {
+  font-family: var(--font-style-title);
+}

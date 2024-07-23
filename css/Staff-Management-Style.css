@@ -1,0 +1,123 @@
+/* STAFF MANAGEMENT =============================================================================================================================== */
+.staff-management-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.staff-management-section .h1-text1 {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 4em;
+}
+
+.staff-management-section .staff-table-container {
+  display: block;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.staff-management-section .staff-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.staff-management-section .staff-table th,
+.staff-management-section .staff-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: none;
+  text-align: center;
+}
+
+.staff-management-section .staff-table th {
+  font-size: 1.5rem;
+}
+
+.staff-management-section .staff-table td {
+  font-size: 1.2rem;
+}
+
+.staff-management-section .staff-table img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.staff-management-section .view-btn,
+.staff-management-section .remove-btn {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.staff-management-section .view-btn {
+  background-color: black;
+  color: white;
+}
+
+.staff-management-section .remove-btn {
+  background-color: red;
+  color: white;
+}
+
+.staff-management-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.staff-management-section .add-staff-btn {
+  display: inline;
+}
+
+.staff-management-section .new-staff-account {
+  display: none;
+}
+
+.staff-management-section .new-staff-account .account-inp-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.staff-management-section .new-staff-account .account-inp-container div {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.staff-management-section .new-staff-account .account-inp-container div label {
+  width: 130px;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+
+.staff-management-section
+  .new-staff-account
+  .account-inp-container
+  div
+  input:not(.not-name) {
+  width: 520px;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.staff-management-section
+  .new-staff-account
+  .account-inp-container
+  div
+  input.not-name {
+  width: 185px;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+/* STAFF MANAGEMENT END =============================================================================================================================== */
