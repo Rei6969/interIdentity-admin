@@ -1219,6 +1219,7 @@
             <a href="#" class="btn-manage-post">Manage Post</a>
             <a href="#" class="btn-pending-approvals">Pending Approvals</a>
             <a href="#" class="btn-archive">Archive</a>
+            <a href="#" class="btn-questions">Questions</a>
           </aside>
 
           <main class="control-main-container">
@@ -1382,6 +1383,7 @@
                   <option value="posts">Blogs</option>
                   <option value="stories">Stories</option>
                   <option value="polls">Polls</option>
+                  <option value="questions">Questions</option>
                 </select>
 
                 <input
@@ -1392,6 +1394,12 @@
               </div>
 
               <div class="post-container"></div>
+            </div>
+
+            <div class="questions-container">
+              <h1 class="h1-text">SUBMITTED QUESTIONS</h1>
+
+              <div class="questions"></div>
             </div>
           </main>
         </section>
@@ -1671,6 +1679,11 @@
     <script
       type="module"
       src="./../js/Control-Archive-Script.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="./../js/Control-Questions-Script.js"
       defer
     ></script>
     <script type="module" src="./../js/Admin-Profile-Script.js" defer></script>
