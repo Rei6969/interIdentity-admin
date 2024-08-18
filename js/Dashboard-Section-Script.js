@@ -47,7 +47,7 @@ const sectionDashboard = document.getElementById("dashboard-section");
 const btnViewUserEngagement = sectionDashboard.querySelector(
   ".btn-view-user-engagement"
 );
-const btnManageUsers = sectionDashboard.querySelector(".btn-manage-users");
+const btnManageUsers = document.querySelector("#btn-manage-users");
 // ===============================================================================================================================================
 const btnBackUserEngagement = sectionDashboard.querySelector(
   ".btn-back-user-engagement"
@@ -55,9 +55,7 @@ const btnBackUserEngagement = sectionDashboard.querySelector(
 const btnBackManageUsers = sectionDashboard.querySelector(
   ".btn-back-manage-users"
 );
-const btnBackUserProfile = sectionDashboard.querySelector(
-  ".btn-back-users-profile"
-);
+const btnBackUserProfile = document.querySelector(".btn-back-users-profile");
 // ===============================================================================================================================================
 const dashboardLanding = document.getElementById("dashboard-landing");
 const userEngagementContainer = document.getElementById(
@@ -90,7 +88,7 @@ btnDashboard.addEventListener("click", () => {
 
   dashboardLanding.style.removeProperty("display");
   userEngagementContainer.style.display = "none";
-  manageUsersContainer.style.display = "none";
+  // manageUsersContainer.style.display = "none";
 });
 
 // =============================================================================================================================================
@@ -99,10 +97,10 @@ btnViewUserEngagement.addEventListener("click", () => {
   handleNav();
 });
 
-btnManageUsers.addEventListener("click", () => {
-  sessionStorage.setItem("current-dashboard-nav", "manageUsersContainer");
-  handleNav();
-});
+// btnManageUsers.addEventListener("click", () => {
+//   sessionStorage.setItem("current-dashboard-nav", "manageUsersContainer");
+//   handleNav();
+// });
 // =============================================================================================================================================
 
 handleNav();
@@ -112,7 +110,7 @@ function handleNav() {
 
   dashboardLanding.style.display = "none";
   userEngagementContainer.style.removeProperty("display");
-  manageUsersContainer.style.removeProperty("display");
+  // manageUsersContainer.style.removeProperty("display");
 
   if (nav === "userEngagementContainer") {
     userEngagementContainer.style.display = "block";
@@ -135,10 +133,10 @@ btnBackUserEngagement.addEventListener("click", () => {
   handleNav();
 });
 
-btnBackManageUsers.addEventListener("click", () => {
-  sessionStorage.setItem("current-dashboard-nav", "userEngagementContainer");
-  handleNav();
-});
+// btnBackManageUsers.addEventListener("click", () => {
+//   sessionStorage.setItem("current-dashboard-nav", "userEngagementContainer");
+//   handleNav();
+// });
 // =============================================================================================================================================
 
 async function displayQuizScore() {
@@ -276,6 +274,9 @@ async function displayUserEngagementByAgeAndGender() {
 // MANAGE USERS =============================================================================================================================================
 // displayUsersCard();
 
+btnManageUsers.addEventListener("click", displayUsersCard);
+btnDashboard.addEventListener("click", displayUsersCard);
+
 async function displayUsersCard() {
   usersCardContainer.innerHTML = "";
 
@@ -284,9 +285,7 @@ async function displayUsersCard() {
   const snapshot = await get(usersRef);
   const snapshotData = snapshot.val();
 
-  const usersCount = sectionDashboard.querySelectorAll(
-    ".registered-users-count"
-  );
+  const usersCount = document.querySelectorAll(".registered-users-count");
 
   usersCount.forEach((count) => {
     count.textContent = snapshotData ? Object.keys(snapshotData).length : 0;
@@ -322,7 +321,7 @@ async function displayUsersCard() {
     cardContent.addEventListener("click", async () => {
       document.getElementById("registered-manage-users").style.display = "none";
       usersCardContainer.style.display = "none";
-      btnBackManageUsers.style.display = "none";
+      // btnBackManageUsers.style.display = "none";
       userInfoContainer.style.display = "block";
       btnBackUserProfile.style.display = "block";
 
@@ -377,7 +376,7 @@ btnBackUserProfile.addEventListener("click", () => {
   userInfoContainer.style.display = "none";
   btnBackUserProfile.style.display = "none";
   usersCardContainer.style.display = "grid";
-  btnBackManageUsers.style.display = "block";
+  // btnBackManageUsers.style.display = "block";
   document.getElementById("registered-manage-users").style.display = "flex";
 });
 // MANAGE USERS END =============================================================================================================================================
