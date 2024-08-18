@@ -20,11 +20,12 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  border: 1px solid #000;
 }
 
 .staff-management-section .staff-table th,
 .staff-management-section .staff-table td {
-  padding: 12px 15px;
+  padding: 12px 12px;
   text-align: left;
   border: none;
   text-align: center;
@@ -32,10 +33,22 @@
 
 .staff-management-section .staff-table th {
   font-size: 1.5rem;
+  background-color: var(--color-main-purple-1);
+  color: #fff;
+  border: 1px solid #000;
 }
 
 .staff-management-section .staff-table td {
   font-size: 1.2rem;
+  border: 1px solid #000;
+}
+
+.staff-management-section .staff-table tr:nth-child(even) {
+  background-color: var(--color-main-gray-1);
+}
+
+.staff-management-section .staff-table tr:nth-child(odd) {
+  background-color: var(--color-main-gray-3);
 }
 
 .staff-management-section .staff-table img {
