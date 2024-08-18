@@ -15,7 +15,7 @@ body {
 #dashboard-aside-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   background-color: var(--color-main-black);
   width: 250px;
   height: 100%;
@@ -29,13 +29,16 @@ body {
 
 #dashboard-aside-container a {
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 10px 0;
-  text-align: center;
+  /* text-align: center; */
   cursor: pointer;
   margin: 5px;
   color: #fff;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #dashboard-aside-container a:hover {
@@ -43,11 +46,19 @@ body {
   color: #000;
 }
 
+#dashboard-aside-container a img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
 #dashboard-aside-container a.btn-logout {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
+  text-align: center;
+  display: block;
 }
 
 #dashboard-aside-container .admin-header {
