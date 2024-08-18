@@ -1,5 +1,6 @@
 const allBtn = document.querySelectorAll(".nav a");
 const dashboardSection = document.getElementById("dashboard-section");
+const manageUsersSection = document.getElementById("manage-users-container");
 const contentSection = document.getElementById("content-section");
 const staffManagementSection = document.getElementById(
   "staff-management-section"
@@ -30,6 +31,7 @@ function designNav() {
   }
 
   dashboardSection.style.display = "none";
+  manageUsersSection.style.display = "none";
   contentSection.style.display = "none";
   staffManagementSection.style.display = "none";
   adminProfileSection.style.display = "none";
@@ -42,6 +44,8 @@ function designNav() {
 
       if (nav === "btn-dashboard") {
         dashboardSection.style.display = "grid";
+      } else if (nav === "btn-manage-users") {
+        manageUsersSection.style.display = "grid";
       } else if (nav === "btn-content") {
         contentSection.style.display = "block";
       } else if (nav === "btn-staff") {
