@@ -263,34 +263,27 @@
 /* USER ENGAGEMENT END =============================================================================================================================== */
 
 /* USER MANAGEMENT =============================================================================================================================== */
-.dashboard-section .dashboard-right .manage-users-container {
+.manage-users-container {
   display: none;
 }
 
-.dashboard-section .dashboard-right .manage-users-container .h1-text {
+.manage-users-container .h1-text {
   font-size: 3rem;
   margin: 0 0 0 20px;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .registered-users-container {
+.manage-users-container .registered-users-container {
   display: flex;
   align-items: center;
   margin-left: 20px;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .registered-users-container
-  h3 {
+.manage-users-container .registered-users-container h3 {
   margin-right: 5px;
   font-size: 1.3rem;
 }
 
-.dashboard-section .dashboard-right .manage-users-container button {
+.manage-users-container button {
   background-color: #000;
   color: #fff;
   font-size: 1.2rem;
@@ -301,25 +294,18 @@
   cursor: pointer;
 }
 
-.dashboard-section .dashboard-right .manage-users-container button:hover {
+.manage-users-container button:hover {
   background-color: var(--color-main-gray-2);
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .users-card-container {
+.manage-users-container .users-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 20px;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .users-card-container
-  .users-card-content {
+.manage-users-container .users-card-container .users-card-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -331,23 +317,12 @@
   overflow: hidden;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .users-card-container
-  .users-card-content
-  div {
+.manage-users-container .users-card-container .users-card-content div {
   display: flex;
   align-items: center;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .users-card-container
-  .users-card-content
-  div
-  img {
+.manage-users-container .users-card-container .users-card-content div img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -356,30 +331,16 @@
   object-position: center;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .users-card-container
-  .users-card-content
-  div
-  h1 {
+.manage-users-container .users-card-container .users-card-content div h1 {
   font-size: 1.7rem;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .users-card-container
-  .users-card-content
-  img {
+.manage-users-container .users-card-container .users-card-content img {
   width: 50px;
 }
 
 /* USER INFO =============================================================================================================================== */
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container {
+.manage-users-container .user-info-container {
   display: none;
   background-color: var(--color-main-gray-1);
   margin: 20px;
@@ -387,21 +348,12 @@
   border-radius: 30px;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .user-profile-name {
+.manage-users-container .user-info-container .user-profile-name {
   display: flex;
   align-items: center;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .user-profile-name
-  img {
+.manage-users-container .user-info-container .user-profile-name img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -410,21 +362,12 @@
   margin-right: 20px;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .user-profile-name
-  h1 {
+.manage-users-container .user-info-container .user-profile-name h1 {
   font-size: 3rem;
   text-decoration: underline;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .user-info {
+.manage-users-container .user-info-container .user-info {
   display: block;
   background-color: var(--color-main-gray-3);
   padding: 20px 30px;
@@ -432,42 +375,22 @@
   box-shadow: 3px 3px 3px var(--color-main-gray-2);
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .user-info
-  div {
+.manage-users-container .user-info-container .user-info div {
   display: grid;
   grid-template-columns: 150px 1fr;
   font-size: 1.3rem;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .user-info
-  div
-  h3 {
+.manage-users-container .user-info-container .user-info div h3 {
   padding: 0;
   margin: 10px 0;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .posts-count {
+.manage-users-container .user-info-container .posts-count {
   display: flex;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .posts-count
-  div {
+.manage-users-container .user-info-container .posts-count div {
   display: flex;
   justify-content: space-between;
   margin: 0 20px 20px 0;
@@ -477,22 +400,13 @@
   padding: 10px;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .posts-count
-  div
-  h1 {
+.manage-users-container .user-info-container .posts-count div h1 {
   padding: 0;
   margin: 0;
+  font-size: 1.2rem;
 }
 
-.dashboard-section
-  .dashboard-right
-  .manage-users-container
-  .user-info-container
-  .restrict-container {
+.manage-users-container .user-info-container .restrict-container {
   display: flex;
   justify-content: flex-end;
   width: 100%;
