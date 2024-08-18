@@ -26,10 +26,37 @@
           <h1 id="admin-name">Admin</h1>
         </div>
 
-        <a class="btn-dashboard" id="btn-dashboard">Dashboard</a>
-        <a class="btn-content" id="btn-content">Content Settings</a>
-        <a class="btn-control" id="btn-control">Control</a>
-        <a class="btn-staff" id="btn-staff">Staff Management</a>
+        <a class="btn-dashboard" id="btn-dashboard"
+          ><img
+            src="./../media/icons/icons8-dashboard-layout-96.png"
+            alt="dashboard"
+          />
+          Dashboard</a
+        >
+        <a class="btn-manage-users" id="btn-manage-users"
+          ><img
+            src="./../media/icons/icons8-user-settings-96.png"
+            alt="dashboard"
+          />Manage Users</a
+        >
+        <a class="btn-content" id="btn-content"
+          ><img
+            src="./../media/icons/icons8-cms-96.png"
+            alt="dashboard"
+          />Content Settings</a
+        >
+        <a class="btn-control" id="btn-control"
+          ><img
+            src="./../media/icons/icons8-setting-96.png"
+            alt="dashboard"
+          />Control</a
+        >
+        <a class="btn-staff" id="btn-staff"
+          ><img
+            src="./../media/icons/icons8-staff-96.png"
+            alt="dashboard"
+          />Staff Management</a
+        >
         <a class="btn-logout" id="btn-logout">Logout</a>
       </aside>
 
@@ -79,7 +106,7 @@
                   <h3 class="registered-users-count users-text">0</h3>
                 </div>
 
-                <button class="btn-manage-users">Manage Users</button>
+                <!-- <button class="btn-manage-users">Manage Users</button> -->
               </div>
 
               <div class="table-container">
@@ -172,161 +199,128 @@
                 </table>
               </div>
             </div>
-
-            <div class="manage-users-container" id="manage-users-container">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                "
-              >
-                <h1 class="h1-text">Manage Users</h1>
-                <button class="btn-back-manage-users">Back</button>
-                <button class="btn-back-users-profile" style="display: none">
-                  Back
-                </button>
-              </div>
-
-              <div
-                class="registered-users-container"
-                id="registered-manage-users"
-              >
-                <div style="display: flex">
-                  <h3>Total No. of Registered Users:</h3>
-                  <h3 class="registered-users-count users-text">0</h3>
-                </div>
-              </div>
-
-              <div class="filter-container"></div>
-
-              <div class="users-card-container" id="users-card-container">
-                <!-- <div class="users-card-content">
-                  <div>
-                    <img src="./../media/images/default-profile.png" alt="img" />
-                    <h1>NAME</h1>
-                  </div>
-                  <img
-                    src="./../media/icons/icons8-chevron-right-90.png"
-                    alt="right"
-                  />
-                </div>
-
-                <div class="users-card-content">
-                  <div>
-                    <img src="./../media/images/brook.jpg" alt="img" />
-                    <h1>NAME</h1>
-                  </div>
-                  <img
-                    src="./../media/icons/icons8-chevron-right-90.png"
-                    alt="right"
-                  />
-                </div>
-
-                <div class="users-card-content">
-                  <div>
-                    <img src="./../media/images/brook.jpg" alt="img" />
-                    <h1>NAME</h1>
-                  </div>
-                  <img
-                    src="./../media/icons/icons8-chevron-right-90.png"
-                    alt="right"
-                  />
-                </div> -->
-              </div>
-
-              <!-- USER INFO ============================================================================================================================== -->
-              <div class="user-info-container" id="user-info-container">
-                <div class="user-profile-name">
-                  <img
-                    src="./../media/images/default-profile.png"
-                    alt="img"
-                    class="profile-img"
-                  />
-                  <h1 class="name"></h1>
-                </div>
-
-                <div class="user-info">
-                  <hr />
-                  <div>
-                    <h3>First Name:</h3>
-                    <h3 class="first-name"></h3>
-                  </div>
-
-                  <hr />
-                  <div>
-                    <h3>Last Name:</h3>
-                    <h3 class="last-name"></h3>
-                  </div>
-
-                  <hr />
-                  <div>
-                    <h3>Email:</h3>
-                    <h3 class="email"></h3>
-                  </div>
-
-                  <hr />
-                  <div>
-                    <h3>Contact:</h3>
-                    <h3 class="contact"></h3>
-                  </div>
-
-                  <hr />
-                  <div>
-                    <h3>City or Province:</h3>
-                    <h3 class="province"></h3>
-                  </div>
-
-                  <hr />
-                  <div>
-                    <h3>Age:</h3>
-                    <h3 class="age"></h3>
-                  </div>
-                  <hr />
-                </div>
-
-                <h2>POSTS</h2>
-
-                <div class="posts-count">
-                  <div>
-                    <h1>BLOGS</h1>
-                    <h1 class="blogs-count"></h1>
-                  </div>
-
-                  <div>
-                    <h1>DISCUSSIONS</h1>
-                    <h1 class="discussions-count"></h1>
-                  </div>
-
-                  <div>
-                    <h1>POLLS</h1>
-                    <h1 class="polls-count"></h1>
-                  </div>
-                </div>
-
-                <div class="restrict-container">
-                  <button class="btn-restrict">Restrict</button>
-                </div>
-              </div>
-              <!-- USER INFO END ============================================================================================================================== -->
-            </div>
           </div>
         </section>
         <!-- DASHBOARD END ============================================================================================================================== -->
 
+        <div class="manage-users-container" id="manage-users-container">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h1 class="h1-text">Manage Users</h1>
+            <!-- <button class="btn-back-manage-users">Back</button> -->
+            <button class="btn-back-users-profile" style="display: none">
+              Back
+            </button>
+          </div>
+
+          <div class="registered-users-container" id="registered-manage-users">
+            <div style="display: flex">
+              <h3>Total No. of Registered Users:</h3>
+              <h3 class="registered-users-count users-text">0</h3>
+            </div>
+          </div>
+
+          <div class="filter-container"></div>
+
+          <div class="users-card-container" id="users-card-container"></div>
+
+          <!-- USER INFO ============================================================================================================================== -->
+          <div class="user-info-container" id="user-info-container">
+            <div class="user-profile-name">
+              <img
+                src="./../media/images/default-profile.png"
+                alt="img"
+                class="profile-img"
+              />
+              <h1 class="name"></h1>
+            </div>
+
+            <div class="user-info">
+              <hr />
+              <div>
+                <h3>First Name:</h3>
+                <h3 class="first-name"></h3>
+              </div>
+
+              <hr />
+              <div>
+                <h3>Last Name:</h3>
+                <h3 class="last-name"></h3>
+              </div>
+
+              <hr />
+              <div>
+                <h3>Email:</h3>
+                <h3 class="email"></h3>
+              </div>
+
+              <hr />
+              <div>
+                <h3>Contact:</h3>
+                <h3 class="contact"></h3>
+              </div>
+
+              <hr />
+              <div>
+                <h3>City or Province:</h3>
+                <h3 class="province"></h3>
+              </div>
+
+              <hr />
+              <div>
+                <h3>Age:</h3>
+                <h3 class="age"></h3>
+              </div>
+              <hr />
+            </div>
+
+            <h2>POSTS</h2>
+
+            <div class="posts-count">
+              <div>
+                <h1>BLOGS</h1>
+                <h1 class="blogs-count"></h1>
+              </div>
+
+              <div>
+                <h1>DISCUSSIONS</h1>
+                <h1 class="discussions-count"></h1>
+              </div>
+
+              <div>
+                <h1>POLLS</h1>
+                <h1 class="polls-count"></h1>
+              </div>
+            </div>
+
+            <div class="restrict-container">
+              <button class="btn-restrict">Restrict</button>
+            </div>
+          </div>
+          <!-- USER INFO END ============================================================================================================================== -->
+        </div>
+
         <!-- CONTENT SETTINGS ============================================================================================================================== -->
         <section class="content-section" id="content-section">
-          <div class="content-nav">
-            <a class="btn-home" id="btn-home">Home</a>
-            <a class="btn-videos" id="btn-videos">Videos</a>
-            <a class="btn-quiz" id="btn-quiz">Quiz</a>
-            <a class="btn-news" id="btn-news">News</a>
-            <a class="btn-events" id="btn-events">Events</a>
-            <a class="btn-articles" id="btn-articles">Articles</a>
-            <a class="btn-research-papers" id="btn-research-papers"
-              >Research Papers</a
-            >
-            <a class="btn-about-us" id="btn-about-us">About Us</a>
+          <div class="content-nav-dropdown">
+            <button class="dropdown-btn">Menu</button>
+            <div class="dropdown-content">
+              <a class="btn-home" id="btn-home">Home</a>
+              <a class="btn-videos" id="btn-videos">Videos</a>
+              <a class="btn-quiz" id="btn-quiz">Quiz</a>
+              <a class="btn-news" id="btn-news">News</a>
+              <a class="btn-events" id="btn-events">Events</a>
+              <a class="btn-articles" id="btn-articles">Articles</a>
+              <a class="btn-research-papers" id="btn-research-papers"
+                >Research Papers</a
+              >
+              <a class="btn-about-us" id="btn-about-us">About Us</a>
+            </div>
           </div>
 
           <section class="intersex-variation-section">
