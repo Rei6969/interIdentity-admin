@@ -1181,7 +1181,9 @@ function handleUpdatePapers(data, papersID) {
 // RESEARCH PAPERS END ==========================================================================================================================================
 
 // NAV ==========================================================================================================================================
-const btnNav = document.querySelectorAll(".content-section .content-nav a");
+const btnNav = document.querySelectorAll(
+  ".content-nav-dropdown .dropdown-content a"
+);
 
 btnNav.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -1191,6 +1193,7 @@ btnNav.forEach((btn) => {
 });
 
 designNav();
+
 function designNav() {
   const nav = sessionStorage.getItem("content-nav");
 
